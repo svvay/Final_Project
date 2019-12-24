@@ -13,7 +13,7 @@ class WriteRead:
 
     def write(self):
         with open(f'files/{self.file_name}{self.file_extention}', 'a') as fileCSV:
-            result = contact_func.input_info()
+            result = contact_func.input_info() #try [*result.keys()]
             fieldnames = list(result.keys())
             writer = csv.DictWriter(fileCSV, fieldnames=fieldnames)
             writer.writerows([result])
